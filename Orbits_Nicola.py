@@ -1,20 +1,9 @@
-#-6.8e6
-#10717
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
 from scipy.signal import find_peaks
 
-
-#see website
-#automatic option to do at 45 degree inital pos (w always 90 degree initial vel), at desired magnitudes for pos and v
-
-#calculate eccentricity? or get vy from a given e
-#put time in plot. period, eccentricity, energies? plot arrow for rocket. need different size and color for moon
-
-# both circular and eccentric orbits - stable and repeatable?
-# energy conservation - accuracy. what dt needed
-# error
 
 
 G = 6.67e-11# m^3*kg^-1*s^-2, Gravitational constant
