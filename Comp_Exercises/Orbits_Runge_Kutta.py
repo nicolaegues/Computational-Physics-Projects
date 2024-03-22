@@ -95,7 +95,7 @@ def f_2_with_moon(r):
 
 def f_2_e(re, rm): 
     """
-    Second Runge-Kutta function for the gravitational effects fo the Moon on the Earth
+    Second Runge-Kutta function for the gravitational effects of the Moon on the Earth
     ----------
     Parameters
     ----------
@@ -113,7 +113,7 @@ def f_2_e(re, rm):
 
 def f_2_m(re, rm): 
     """
-    Second Runge-Kutta function for the gravitational effects fo the Earth on the Moon
+    Second Runge-Kutta function for the gravitational effects of the Earth on the Moon
     ----------
     Parameters
     ----------
@@ -221,11 +221,12 @@ def energy_b(r, v):
 def RK4_iteration(r_start_vals, v_start_vals,  dt, t_max, f, f_2, f_3 = 1, r2_start_vals = [0, 0, 0], v2_start_vals= [0, 0, 0], part_a = False, part_c = False, part_b = False, part_d = False):
     """
     Main functon for the Runge Kutta method. 
-    Allows for a single solution (solution for the rocket orbiting around the Earth or around the Earth and the Moon), 
-    or for two solutions (solution for the Earth and the Moon orbiting under eachother's influence or the Earth and the Moon orbiting under eachother's and a stationary Sun's infleunce.)
+    Allows for a single solution (solution for the rocket orbiting around the Earth or for the rocket orbiting around the Earth and the Moon), 
+    or for two solutions (solution for the Earth and the Moon orbiting under eachother's influence or the Earth and the Moon orbiting under eachother's and a stationary Sun's influence.)
 
     Within the Runge-Kutta iteration, it includes an energy calculation at each timestep (for parts a and b), 
-    a calculation of the orbital period for each part (where applicable), a section that tests for a crash into the Moon or the Earth (for parts a and b), 
+    a calculation of the orbital period for each part of the exercise (when applicable), 
+    a section that tests for a crash into the Moon or the Earth (for parts a and b), 
     and error calculations.
     ----------
     Parameters
@@ -294,7 +295,7 @@ def RK4_iteration(r_start_vals, v_start_vals,  dt, t_max, f, f_2, f_3 = 1, r2_st
     one_orbit2= False
     diff = np.zeros(nr_steps)
 
-    #RUnge Kutta iteration
+    #Runge Kutta iteration
     for i in range(1, nr_steps):
 
         if part_c == True:
@@ -402,7 +403,7 @@ def RK4_iteration(r_start_vals, v_start_vals,  dt, t_max, f, f_2, f_3 = 1, r2_st
                 one_orbit1 = True
     
 
-        #Orbital period calculation for part c
+        #Orbital period calculation for part d
         if part_d == True and one_orbit1 == False:
             if (np.sign(r[i, 1]) != np.sign(r[i-1, 1])) and r[i-1, 0] != 0.0 and r[i, 0] < Rs_0[0]:
                 print(r[i, 0])
