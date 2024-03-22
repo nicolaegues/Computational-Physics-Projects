@@ -2,15 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 
-#definitions of everything and comments 
-#check inputs-handle errors
-
-
-
-#if time step too small, accuracy goes because numerical precision disappears
-#problem? terminal velocity
-#improvements: more accurate time stepping methods (lec)
-
 
 
 m = 120 #kg, approx. of Baumgartner's weight (body+equipment)
