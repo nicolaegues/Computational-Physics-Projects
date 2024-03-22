@@ -1,2 +1,3 @@
-Three exercises from my 3rd year undergraduate "Introduction to Computational Physics" module. 
+Three Compuational Physics exercises completed in the third year of my BSc Physics and Philosopy degree.
+
 
